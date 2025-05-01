@@ -1,0 +1,48 @@
+# CHANGELOG
+
+> Package changelog.
+
+<section class="release" id="unreleased">
+
+## Unreleased (2025-05-01)
+
+<section class="features">
+
+### Features
+
+-   [`3de82ab`](https://github.com/stdlib-js/stdlib/commit/3de82aba142ef3b9c16cd615175031305fa02237) - add `random/tools/unary-factory`
+
+</section>
+
+<!-- /.features -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`3de82ab`](https://github.com/stdlib-js/stdlib/commit/3de82aba142ef3b9c16cd615175031305fa02237) - **feat:** add `random/tools/unary-factory` _(by Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Athan Reines
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
