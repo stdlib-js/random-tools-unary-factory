@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`58747ab`](https://github.com/stdlib-js/stdlib/commit/58747abd76284c8096b73106b56cd580016d5701) - **docs:** update copy _(by Athan Reines)_
 -   [`3de82ab`](https://github.com/stdlib-js/stdlib/commit/3de82aba142ef3b9c16cd615175031305fa02237) - **feat:** add `random/tools/unary-factory` _(by Athan Reines)_
 
 </details>
