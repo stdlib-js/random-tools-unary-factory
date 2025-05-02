@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Create a function for generating pseudorandom numbers drawn from a single-parameter probability distribution.
+> Create a function for generating pseudorandom values drawn from a unary PRNG.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -45,43 +45,37 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random-tools-unary-factory
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-createFactory = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-tools-unary-factory@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var createFactory = require( 'path/to/vendor/umd/random-tools-unary-factory/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-tools-unary-factory@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.createFactory;
-})();
-</script>
+var createFactory = require( '@stdlib/random-tools-unary-factory' );
 ```
 
 #### createFactory( prng, idtypes odtypes, policies\[, options] )
 
-Returns a function for generating pseudorandom numbers drawn from a single-parameter probability distribution.
+Returns a function for generating pseudorandom values drawn from a unary PRNG.
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
@@ -102,9 +96,9 @@ var factory = createFactory( exponential, idt, odt, policies, options );
 
 The function has the following parameters:
 
--   **prng**: unary pseudorandom number generator. Must have the following methods:
+-   **prng**: unary pseudorandom value generator. Must have the following methods:
 
-    -   **factory**: method which returns a new unary pseudorandom number generator.
+    -   **factory**: method which returns a new unary pseudorandom value generator.
 
 -   **idtypes**: list of supported input data types.
 
@@ -118,11 +112,11 @@ The function has the following parameters:
 
 The function supports the following options:
 
--   **order**: default memory layout [order][@stdlib/ndarray/orders].
+-   **order**: default [memory layout][@stdlib/ndarray/orders].
 
 #### factory( \[options] )
 
-Returns a function for generating pseudorandom numbers drawn from a single-parameter probability distribution.
+Returns a function for generating pseudorandom values drawn from a unary PRNG.
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
@@ -147,13 +141,13 @@ var random = factory();
 The function supports the following options:
 
 -   **prng**: pseudorandom number generator for generating uniformly distributed pseudorandom numbers on the interval `[0,1)`. If provided, the function **ignores** both the `state` and `seed` options. In order to seed the underlying pseudorandom number generator, one must seed the provided `prng` (assuming the provided `prng` is seedable).
--   **seed**: pseudorandom number generator seed.
--   **state**: a [`Uint32Array`][@stdlib/array/uint32] containing pseudorandom number generator state. If provided, the function ignores the `seed` option.
--   **copy**: boolean indicating whether to copy a provided pseudorandom number generator state. Setting this option to `false` allows sharing state between two or more pseudorandom number generators. Setting this option to `true` ensures that an underlying generator has exclusive control over its internal state. Default: `true`.
+-   **seed**: pseudorandom value generator seed.
+-   **state**: a [`Uint32Array`][@stdlib/array/uint32] containing pseudorandom value generator state. If provided, the function ignores the `seed` option.
+-   **copy**: boolean indicating whether to copy a provided pseudorandom value generator state. Setting this option to `false` allows sharing state between two or more pseudorandom value generators. Setting this option to `true` ensures that an underlying generator has exclusive control over its internal state. Default: `true`.
 
 #### random( shape, param1\[, options] )
 
-Returns an ndarray filled with pseudorandom numbers drawn from a probability distribution.
+Returns an ndarray filled with pseudorandom values drawn from a unary PRNG.
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
@@ -181,7 +175,7 @@ var v = random( [ 2, 2 ], 2.0 );
 The function has the following parameters:
 
 -   **shape**: output ndarray shape.
--   **param1**: distribution parameter. May be either a scalar or an ndarray. If an ndarray, must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the specified output ndarray shape.
+-   **param1**: PRNG parameter. May be either a scalar or an ndarray. If an ndarray, must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the specified output ndarray shape.
 -   **options**: function options (_optional_).
 
 The function accepts the following options:
@@ -225,7 +219,7 @@ var dt = getDType( v );
 
 #### random.assign( param1, out )
 
-Fills an ndarray with pseudorandom numbers drawn from a probability distribution.
+Fills an ndarray with pseudorandom values drawn from a unary PRNG.
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
@@ -257,7 +251,7 @@ var bool = ( v === out );
 
 The method has the following parameters:
 
--   **param1**: distribution parameter. May be either a scalar or an ndarray. If an ndarray, must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the output ndarray.
+-   **param1**: PRNG parameter. May be either a scalar or an ndarray. If an ndarray, must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the output ndarray.
 -   **out**: output ndarray.
 
 #### random.PRNG
@@ -289,7 +283,7 @@ var prng = random.PRNG;
 
 #### random.seed
 
-The value used to seed the underlying pseudorandom number generator.
+The value used to seed the underlying pseudorandom value generator.
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
@@ -344,7 +338,7 @@ var seed = random.seed;
 
 #### random.seedLength
 
-Length of the underlying pseudorandom number generator seed.
+Length of the underlying pseudorandom value generator seed.
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
@@ -399,7 +393,7 @@ var len = random.seedLength;
 
 #### random.state
 
-Writable property for getting and setting the underlying pseudorandom number generator state.
+Writable property for getting and setting the underlying pseudorandom value generator state.
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
@@ -454,7 +448,7 @@ var state = random.state;
 
 #### random.stateLength
 
-Length of the underlying pseudorandom number generator state.
+Length of the underlying pseudorandom value generator state.
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
@@ -509,7 +503,7 @@ var len = random.stateLength;
 
 #### random.byteLength
 
-Size (in bytes) of underlying pseudorandom number generator state.
+Size (in bytes) of underlying pseudorandom value generator state.
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
@@ -588,17 +582,12 @@ var len = random.byteLength;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-tools-unary-factory@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var exponential = require( '@stdlib/random-base-exponential' );
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var createFactory = require( '@stdlib/random-tools-unary-factory' );
 
 // Create a new PRNG factory...
 var idt = dtypes( 'real_and_generic' );
@@ -627,11 +616,6 @@ var param = new ndarray( 'generic', [ 2.0, 20.0, 200.0 ], [ 3, 1 ], [ 1, 1 ], 0,
 // Broadcast the parameters to generate another 3x3 matrix of pseudorandom numbers:
 x = random( [ 3, 3 ], param );
 console.log( ndarray2array( x ) );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -726,13 +710,13 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/random-tools-unary-factory/main/LICENSE
 
-[@stdlib/ndarray/policies]: https://github.com/stdlib-js/ndarray-policies/tree/umd
+[@stdlib/ndarray/policies]: https://github.com/stdlib-js/ndarray-policies
 
-[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders/tree/umd
+[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes/tree/umd
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/umd
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
 </section>
 
