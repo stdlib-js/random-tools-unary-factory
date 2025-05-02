@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import createFactory from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-tools-unary-factory@deno/mod.js';
+import createFactory from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-tools-unary-factory@v0.0.0-deno/mod.js';
 ```
 
 #### createFactory( prng, idtypes odtypes, policies\[, options] )
@@ -569,7 +569,7 @@ import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-expon
 import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@deno/mod.js';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
-import createFactory from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-tools-unary-factory@deno/mod.js';
+import createFactory from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-tools-unary-factory@v0.0.0-deno/mod.js';
 
 // Create a new PRNG factory...
 var idt = dtypes( 'real_and_generic' );
