@@ -4,12 +4,13 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-02)
+## Unreleased (2025-05-03)
 
 <section class="features">
 
 ### Features
 
+-   [`9a53f4a`](https://github.com/stdlib-js/stdlib/commit/9a53f4ad90da183dfd68aa1e6dc9340aad955cca) - add TypeScript declarations
 -   [`3de82ab`](https://github.com/stdlib-js/stdlib/commit/3de82aba142ef3b9c16cd615175031305fa02237) - add `random/tools/unary-factory`
 
 </section>
@@ -22,6 +23,7 @@
 
 <details>
 
+-   [`9a53f4a`](https://github.com/stdlib-js/stdlib/commit/9a53f4ad90da183dfd68aa1e6dc9340aad955cca) - **feat:** add TypeScript declarations _(by Athan Reines)_
 -   [`99288f7`](https://github.com/stdlib-js/stdlib/commit/99288f71645dbe3209e489e152c7775f86a3052a) - **docs:** update descriptions to be more neutral regarding output values _(by Athan Reines)_
 -   [`65f6a65`](https://github.com/stdlib-js/stdlib/commit/65f6a65b799c493d707c6eb2d55574e42f6a0649) - **docs:** add REPL help _(by Athan Reines)_
 -   [`58747ab`](https://github.com/stdlib-js/stdlib/commit/58747abd76284c8096b73106b56cd580016d5701) - **docs:** update copy _(by Athan Reines)_
