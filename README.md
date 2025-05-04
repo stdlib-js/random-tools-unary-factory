@@ -45,23 +45,41 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random-tools-unary-factory
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import createFactory from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-tools-unary-factory@esm/index.mjs';
+var createFactory = require( '@stdlib/random-tools-unary-factory' );
 ```
 
-#### createFactory( prng, idtypes odtypes, policies\[, options] )
+#### createFactory( prng, idtypes, odtypes, policies\[, options] )
 
 Returns a function for generating pseudorandom values drawn from a unary PRNG.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -101,8 +119,8 @@ The function supports the following options:
 Returns a function for generating pseudorandom values drawn from a unary PRNG.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -132,8 +150,8 @@ The function supports the following options:
 Returns an ndarray filled with pseudorandom values drawn from a unary PRNG.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -171,9 +189,9 @@ The function accepts the following options:
 By default, the function returns an ndarray having a data type determined by the output data type policy. To override the default behavior, set the `dtype` option.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import getDType from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtype@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var getDType = require( '@stdlib/ndarray-dtype' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -204,9 +222,9 @@ var dt = getDType( v );
 Fills an ndarray with pseudorandom values drawn from a unary PRNG.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -241,8 +259,8 @@ The method has the following parameters:
 The underlying pseudorandom number generator.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -268,8 +286,8 @@ var prng = random.PRNG;
 The value used to seed the underlying pseudorandom value generator.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -293,9 +311,9 @@ var seed = random.seed;
 If the factory function is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -323,8 +341,8 @@ var seed = random.seed;
 Length of the underlying pseudorandom value generator seed.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -348,9 +366,9 @@ var len = random.seedLength;
 If the factory function is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -378,8 +396,8 @@ var len = random.seedLength;
 Writable property for getting and setting the underlying pseudorandom value generator state.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -403,9 +421,9 @@ var state = random.state;
 If the factory function is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -433,8 +451,8 @@ var state = random.state;
 Length of the underlying pseudorandom value generator state.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -458,9 +476,9 @@ var len = random.stateLength;
 If the factory function is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -488,8 +506,8 @@ var len = random.stateLength;
 Size (in bytes) of underlying pseudorandom value generator state.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -513,9 +531,9 @@ var len = random.byteLength;
 If the factory function is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var exponential = require( '@stdlib/random-base-exponential' );
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'real_floating_point_and_generic' );
@@ -564,17 +582,12 @@ var len = random.byteLength;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@esm/index.mjs';
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import createFactory from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-tools-unary-factory@esm/index.mjs';
+```javascript
+var exponential = require( '@stdlib/random-base-exponential' );
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var createFactory = require( '@stdlib/random-tools-unary-factory' );
 
 // Create a new PRNG factory...
 var idt = dtypes( 'real_and_generic' );
@@ -603,10 +616,6 @@ var param = new ndarray( 'generic', [ 2.0, 20.0, 200.0 ], [ 3, 1 ], [ 1, 1 ], 0,
 // Broadcast the parameters to generate another 3x3 matrix of pseudorandom numbers:
 x = random( [ 3, 3 ], param );
 console.log( ndarray2array( x ) );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -638,7 +647,7 @@ console.log( ndarray2array( x ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -701,13 +710,13 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/random-tools-unary-factory/main/LICENSE
 
-[@stdlib/ndarray/policies]: https://github.com/stdlib-js/ndarray-policies/tree/esm
+[@stdlib/ndarray/policies]: https://github.com/stdlib-js/ndarray-policies
 
-[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders/tree/esm
+[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes/tree/esm
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/esm
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
 </section>
 
