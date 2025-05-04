@@ -33,6 +33,7 @@
 
 <details>
 
+-   [`18e643f`](https://github.com/stdlib-js/stdlib/commit/18e643f8beca349ca4c6a48009cb49c5cb015060) - **bench:** explicitly set dtype _(by Athan Reines)_
 -   [`2eaea4a`](https://github.com/stdlib-js/stdlib/commit/2eaea4af45fe8ae07759c35d6e8d13636df30637) - **fix:** add type check to ensure only options objects are passed to factory _(by Athan Reines)_
 -   [`9a53f4a`](https://github.com/stdlib-js/stdlib/commit/9a53f4ad90da183dfd68aa1e6dc9340aad955cca) - **feat:** add TypeScript declarations _(by Athan Reines)_
 -   [`99288f7`](https://github.com/stdlib-js/stdlib/commit/99288f71645dbe3209e489e152c7775f86a3052a) - **docs:** update descriptions to be more neutral regarding output values _(by Athan Reines)_
