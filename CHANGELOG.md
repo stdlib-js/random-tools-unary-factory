@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-30)
+## Unreleased (2025-08-22)
 
 <section class="features">
 
@@ -33,6 +33,7 @@
 
 <details>
 
+-   [`8a6dbd7`](https://github.com/stdlib-js/stdlib/commit/8a6dbd7bf692bcd9ce166a7370eda0a7410da3b0) - **docs:** fix example code and return annotation values _(by Philipp Burckhardt)_
 -   [`81f4209`](https://github.com/stdlib-js/stdlib/commit/81f420992213ea27fa5bf8e2c1930ce3be667e4b) - **docs:** fix documented errors _(by Athan Reines)_
 -   [`ac030bd`](https://github.com/stdlib-js/stdlib/commit/ac030bd3dcc70b76129892f94e0347b80469daec) - **style:** fix spacing _(by Athan Reines)_
 -   [`ac07e90`](https://github.com/stdlib-js/stdlib/commit/ac07e9063a58953875c233620315566bf18b0692) - **docs:** fix signature _(by Athan Reines)_
@@ -55,9 +56,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Philipp Burckhardt
 
 </section>
 
