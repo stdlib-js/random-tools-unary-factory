@@ -213,7 +213,7 @@ var v = random( [ 2, 2 ], 2.0, {
 });
 // returns <ndarray>
 
-var dt = getDType( v );
+var dt = String( getDType( v ) );
 // returns 'generic'
 ```
 
@@ -690,8 +690,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
