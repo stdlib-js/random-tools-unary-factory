@@ -47,6 +47,7 @@
     "@stdlib/ndarray-base-assert-is-data-type": "^0.2.2",
     "@stdlib/ndarray-base-assert-is-order": "^0.2.2",
     "@stdlib/ndarray-base-assert-is-output-data-type-policy": "github:stdlib-js/ndarray-base-assert-is-output-data-type-policy#main",
+    "@stdlib/ndarray-base-dtypes2strings": "github:stdlib-js/ndarray-base-dtypes2strings#main",
     "@stdlib/random-tools-unary": "github:stdlib-js/random-tools-unary#main",
     "@stdlib/string-format": "^0.2.2",
     "@stdlib/types": "^0.4.3",

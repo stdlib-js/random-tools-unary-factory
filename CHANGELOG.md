@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-28)
+## Unreleased (2025-12-29)
 
 <section class="features">
 
@@ -33,6 +33,7 @@
 
 <details>
 
+-   [`86003ad`](https://github.com/stdlib-js/stdlib/commit/86003ad3f29289795930f3d74bef5681f5d4d55f) - **docs:** update dtype type _(by Athan Reines)_
 -   [`54dedc8`](https://github.com/stdlib-js/stdlib/commit/54dedc875b59bba13e20c72a81f29bcf6df650be) - **docs:** update example _(by Athan Reines)_
 -   [`8a6dbd7`](https://github.com/stdlib-js/stdlib/commit/8a6dbd7bf692bcd9ce166a7370eda0a7410da3b0) - **docs:** fix example code and return annotation values _(by Philipp Burckhardt)_
 -   [`81f4209`](https://github.com/stdlib-js/stdlib/commit/81f420992213ea27fa5bf8e2c1930ce3be667e4b) - **docs:** fix documented errors _(by Athan Reines)_
