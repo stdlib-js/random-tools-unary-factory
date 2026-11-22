@@ -18,7 +18,7 @@
 
 // TypeScript Version: 4.1
 
-/// <reference types="@stdlib/types"/>
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
 import { DataType, Order, Mode, Shape, OutputPolicy, typedndarray } from '@stdlib/types/ndarray';
 import { ArrayLike } from '@stdlib/types/array';
